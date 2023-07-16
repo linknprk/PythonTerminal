@@ -35,4 +35,5 @@ def user():
         Username = open("username.txt", "w")
         Username.write(username)
         Username.close()
+        import terminal
 user()
