@@ -80,7 +80,7 @@ int main(){
           cout << "You can send " << packets << " you can only send 6550 packets" << endl;
           main();
         }else{
-          string command = "ping " + request + "-n" + to_string(packet);
+          string command = "ping " + request + "-n" + to_string(packets);
           system(command.c_str());
           main();
         }
@@ -100,7 +100,7 @@ int main(){
     }else{
       cout << "Invalid Command!" << endl;
       cout << "The commands are: " << endl;
-      for(int i = 0; i < 11; i++){
+      for(int i = 0; i < 12; i++){
         cout << commands[i] << endl;
       }
     main();
