@@ -7,7 +7,7 @@ int main(){
   string terminalInput;
   printf("Enter a command");
   cin >> terminalInput;
-  for(int i = 0; i < 11; i++){
+  for(int i = 0; i < 12; i++){
     if(terminalInput == commands[i]){
       if(terminalInput == "exit"){
         return 0;
