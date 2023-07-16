@@ -5,7 +5,7 @@ using namespace std;
 int main(){
   string commands[12] = {"ipconfig","echo","help", "exit", "add", "subtract", "multiply", "divide", "+", "-", "*", "/", "cls", "ping"};
   string terminalInput;
-  printf("Enter a command");
+  printf("> ");
   cin >> terminalInput;
   for(int i = 0; i < 12; i++){
     if(terminalInput == commands[i]){
