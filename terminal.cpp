@@ -2,19 +2,19 @@
 #include <string>
 using namespace std;
 int main(){
-  string commands[10] = {"help", "add", "+", "subtract", "-", "multiply", "*", "divide", "/", "echo"}
+  string commands[10] = {"help", "add", "+", "subtract", "-", "multiply", "*", "divide", "/", "echo"};
   string terminalInput;
   printf("Enter a command > ");
   cin >> terminalInput;
-  bool isCommand = false;
+  bool validCommand = false;
   for(int i = 0; i < 10; i++){
-     if(command = commands[i]){
+     if(terminalInput == commands[i]){
        validCommand = true;
        break;
      }
   }
   if(validCommand == true){
-    if(terminalInput == "add" || trerminalInput == "+"){
+    if(terminalInput == "add" || terminalInput == "+"){
     float num1, num2;
     printf("Enter the first number > ");
     cin >> num1;
@@ -23,13 +23,13 @@ int main(){
     cout << "The sum is " << num1+num2 << endl;
     main();
   }
-  if(termialInput == "subtrract" || terminalInput == "-"){
+  if(terminalInput == "subtrract" || terminalInput == "-"){
     float num1, num2;
     printf("Enter the first number > ");
     cin >> num1;
     printf("Enter the second number > ");
     cin >> num2;
-    cout << "The result is " << num-num2 << endl;
+    cout << "The result is " << num1-num2 << endl;
     main();
   }
   if(terminalInput == "multiply" || terminalInput == "*"){
@@ -57,11 +57,10 @@ int main(){
     cout << input << endl;
     main();
   }
-  if(command == "help"){
+  if(terminalInput == "help"){
     cout << "The commands are: " << endl;
     for(int i = 0; i < 10; i++){
       cout << commands[i];
-      break;
     }
     main();
   }
@@ -70,8 +69,7 @@ int main(){
     cout << "The commands that exist are: ";
     for(int i = 0; i < 10; i++){
       cout << commands[i];
-      break;  
     }
     main();
   }
-}
+} 
