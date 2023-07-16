@@ -3,7 +3,7 @@
 #include <cstdlib>
 using namespace std;
 int main(){
-  string commands[12] = {"ipcomfig","echo","help", "exit", "add", "subtract", "multiply", "divide", "+", "-", "*", "/", "cls", "ping"};
+  string commands[12] = {"ipconfig","echo","help", "exit", "add", "subtract", "multiply", "divide", "+", "-", "*", "/", "cls", "ping"};
   string terminalInput;
   printf("Enter a command");
   cin >> terminalInput;
