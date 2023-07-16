@@ -11,6 +11,7 @@ def user():
                 username = open("username.txt", "r")
                 print("Welcome Back ", username.read())
                 username.close()
+                import terminal
             else:
                 if not tries == 3:
                     print("Incorrect Password!")
