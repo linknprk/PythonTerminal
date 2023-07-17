@@ -4,15 +4,15 @@
 #include <cstdlib>
 using namespace std;
 int main(){
-    string commands[17]= {"run", "/?", "mkdir", "change_dir", "del", "help", "exit", "output", "iscmd", "ping", "get_ip", "ipconfig", "listdir", "write_file", "listfile", "python", "file_exists"};
+    string commands[18]= {"run", "rename", "/?", "mkdir", "change_dir", "del", "help", "exit", "output", "iscmd", "ping", "get_ip", "ipconfig", "listdir", "write_file", "listfile", "python", "file_exists"};
     string command;
     printf("Type help to get a list of commands \n");
     printf("> ");
     cin >> command;
-    for(int i = 0; i < 17; i++){
+    for(int i = 0; i < 18; i++){
         if(command == commands[i]){
             if(command == "help" || command == "/?"{
-                for(int i = 0; i < 17; i++){
+                for(int i = 0; i < 18; i++){
                     cout << commands[i] << endl;
                 }
                 main();
@@ -38,7 +38,7 @@ int main(){
                 string cmd;
                 printf("Enter a command > ");
                 cin >> cmd;
-                for(int i = 0; i < 17; i++){
+                for(int i = 0; i < 18; i++){
                     if(cmd == commands[i]){
                         cout << "true" << endl;
                         break;
@@ -131,9 +131,14 @@ int main(){
                 system(cmd.c_str);
                 main();
             }
-        }else if(i > 16){
+            if(command == "rename"){
+                string cmd = "python rename.py";
+                system(cmd.c_str);
+                main();
+            }
+        }else if(i > 18){
             cout << "Invalid Command! The commands that exist are: " << endl;
-            for(int i = 0; i < 17; i++){
+            for(int i = 0; i < 18; i++){
                 cout << commands[i] << endl;
             }
             main();
