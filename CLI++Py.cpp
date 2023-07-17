@@ -4,15 +4,15 @@
 #include <cstdlib>
 using namespace std;
 int main(){
-    string commands[13]= {"run", "help", "exit", "output", "iscmd", "ping", "get_ip", "ipconfig", "listdir", "write_file", "listfile", "python", "file_exists"};
+    string commands[16]= {"run", "mkdir", "change_dir", "del", "help", "exit", "output", "iscmd", "ping", "get_ip", "ipconfig", "listdir", "write_file", "listfile", "python", "file_exists"};
     string command;
     printf("Type help to get a list of commands \n");
     printf("> ");
     cin >> command;
-    for(int i = 0; i < 11; i++){
+    for(int i = 0; i < 16; i++){
         if(command == commands[i]){
             if(command == "help"){
-                for(int i = 0; i < 13; i++){
+                for(int i = 0; i < 16; i++){
                     cout << commands[i] << endl;
                 }
                 main();
@@ -114,10 +114,26 @@ int main(){
                 cin >> program;
                 string cmd = "start " + program;
                 system(cmd.c_str);
+                main();
             }
-        }else if(i > 13){
+            if(command == "mkdir"){
+                string cmd = "python mkdir.py";
+                system(cmd.c_str);
+                main();
+            }
+            if(command == "del"){
+                string cmd = "del.py";
+                system(cmd.c_str);
+                main();
+            }
+            if(command == "change_dir"){
+                string cmd = "python changedir.py";
+                system(cmd.c_str);
+                main();
+            }
+        }else if(i > 16){
             cout << "Invalid Command! The commands that exist are: " << endl;
-            for(int i = 0; i < 13; i++){
+            for(int i = 0; i < 16; i++){
                 cout << commands[i] << endl;
             }
             main();
