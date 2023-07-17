@@ -53,14 +53,14 @@ int main(){
                 string request;
                 printf("Enter the URL/IP Address > ");
                 cin >> request;
-                system(("ping " + request.c_str());
+                system("ping " + request.c_str());
                 main();
             }
             if(command == "get_ip"){
                 string request;
                 printf("Enter a URL(Enter /? for help) > ");
                 cin >> request;
-                system(("tracert " + request.c_str());
+                system("tracert " + request.c_str());
                 main();
             }
             if(command == "ipconfig"){
@@ -68,7 +68,7 @@ int main(){
                 string userInput;
                 cin >> userInput;
                 if(userInput != ""){
-                    system(("ipconfig /" + userInput).c_str());
+                    system("ipconfig /" + userInput.c_str());
                 }else{
                     system("ipconfig");
                 }
