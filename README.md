@@ -11,6 +11,8 @@ CLI++Py can be used for:
 * checking if a file or folder exists
 * running programs
 * Rename files
+* IP Configuration
+
 # How can i use it?
 To use CLI++Py you can use these basic commands:
 * exit To exit out of CLI++Py 1 
