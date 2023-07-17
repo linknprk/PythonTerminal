@@ -4,7 +4,7 @@
 #include <cstdlib>
 using namespace std;
 int main(){
-    string commands[12]= {"help", "exit", "output", "iscmd", "ping", "get_ip", "ipconfig", "listdir", "write_file", "listfile", "python", "file_exists"};
+    string commands[13]= {"run", "help", "exit", "output", "iscmd", "ping", "get_ip", "ipconfig", "listdir", "write_file", "listfile", "python", "file_exists"};
     string command;
     printf("Type help to get a list of commands \n");
     printf("> ");
@@ -12,7 +12,7 @@ int main(){
     for(int i = 0; i < 11; i++){
         if(command == commands[i]){
             if(command == "help"){
-                for(int i = 0; i < 12; i++){
+                for(int i = 0; i < 13; i++){
                     cout << commands[i] << endl;
                 }
                 main();
@@ -38,7 +38,7 @@ int main(){
                 string cmd;
                 printf("Enter a command > ");
                 cin >> cmd;
-                for(int i = 0; i < 12; i++){
+                for(int i = 0; i < 13; i++){
                     if(cmd == commands[i]){
                         cout << "true" << endl;
                         break;
@@ -107,7 +107,13 @@ int main(){
                 system(cmd.c_str);
                 main();
             }
-        }else if(i > 12){
+            if(command == "run"){
+                string program;
+                printf("Enter the program you want to run > ");
+                cin >> program;
+                string cmd = "start " + program;
+            }
+        }else if(i > 13){
             cout << "Invalid Command! The commands that exist are: " << endl;
             for(int i = 0; i < 12;i++){
                 cout << commands[i] << endl;
