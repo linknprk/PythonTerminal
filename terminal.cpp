@@ -5,7 +5,7 @@
 using namespace std;
 int main(){
     system("python Login.py");
-    string commands[11]= {"help", "exit", "output", "iscmd", "ping", "get_ip", "ipconfig", "listdir", "write_file", "listfile", "python"};
+    string commands[12]= {"help", "exit", "output", "iscmd", "ping", "get_ip", "ipconfig", "listdir", "write_file", "listfile", "python", "file_exists"};
     string command;
     printf("Type help to get a list of commands \n");
     printf("> ");
@@ -13,7 +13,7 @@ int main(){
     for(int i = 0; i < 11; i++){
         if(command == commands[i]){
             if(command == "help"){
-                for(int i = 0; i < 9; i++){
+                for(int i = 0; i < 12; i++){
                     cout << commands[i] << endl;
                 }
                 main();
@@ -39,7 +39,7 @@ int main(){
                 string cmd;
                 printf("Enter a command > ");
                 cin >> cmd;
-                for(int i = 0; i < 11; i++){
+                for(int i = 0; i < 12; i++){
                     if(cmd == commands[i]){
                         cout << "true" << endl;
                         break;
@@ -98,14 +98,19 @@ int main(){
                     system(cmd.c_str);
                     main();
                 }else{
-                    strjng cmd = "python";
+                    string cmd = "python";
                     system(cmd.c_str);
                     main();
                 }
             }
-        }else if(i > 11){
+            if(command == "file_exists"){
+                string cmd = "python filexists.py";
+                system(cmd.c_str);
+                main();
+            }
+        }else if(i > 12){
             cout << "Invalid Command! The commands that exist are: " << endl;
-            for(int i = 0; i < 11; i++){
+            for(int i = 0; i < 12;i++){
                 cout << commands[i] << endl;
             }
             main();
