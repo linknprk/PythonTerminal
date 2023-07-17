@@ -45,6 +45,7 @@ int main(){
                     }
                     if(i == 8){
                         cout << "false" << endl;
+                        break;
                     }
                 }
                 main();
