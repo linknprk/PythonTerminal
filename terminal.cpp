@@ -4,7 +4,6 @@
 #include <cstdlib>
 using namespace std;
 int main(){
-    system("python Login.py");
     string commands[12]= {"help", "exit", "output", "iscmd", "ping", "get_ip", "ipconfig", "listdir", "write_file", "listfile", "python", "file_exists"};
     string command;
     printf("Type help to get a list of commands \n");
