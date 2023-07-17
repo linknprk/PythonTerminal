@@ -116,7 +116,7 @@ int main(){
             }
         }else if(i > 13){
             cout << "Invalid Command! The commands that exist are: " << endl;
-            for(int i = 0; i < 12;i++){
+            for(int i = 0; i < 13; i++){
                 cout << commands[i] << endl;
             }
             main();
