@@ -1,6 +1,6 @@
 import os 
 dir = input("Enter a directory > ")
 if os.path.exists(dir):
-  os.system("mkdir " + dir)
+  os.system("cd " + dir)
 else:
-  print("Directory already exists")
+  print("The directory doesn't exist!")
