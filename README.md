@@ -10,7 +10,7 @@ CLI++Py can be used for:
 * pinging
 * checking if a file or folder exists
 * running programs
-
+* Rename files
 # How can i use it?
 To use CLI++Py you can use these basic commands:
 * exit To exit out of CLI++Py 1 
@@ -28,4 +28,5 @@ To use CLI++Py you can use these basic commands:
 * write_file to write a file 13
 * change_dir to go to a directory 14 
 * ipconfig for do get IP Configuration 15 
-* run to run a program 16
+* run to run a program  16
+* Rename to rename files 17
