@@ -35,5 +35,5 @@ def user():
         Username = open("username.txt", "w")
         Username.write(username)
         Username.close()
-        import terminal
+        os.system("start CLI++Py.exe")
 user()
