@@ -53,7 +53,7 @@ int main(){
                 string request;
                 printf("Enter the URL/IP Address > ");
                 cin >> request;
-                system(("ping " + request).c_str());
+                system(("ping " + request.c_str());
                 main();
             }
             if(command == "get_ip"){
