@@ -6,3 +6,4 @@ if os.path.exists(file):
 else:
   new_file = open(file, "w")
   new_file.write(file_content)
+  new_file.close()
