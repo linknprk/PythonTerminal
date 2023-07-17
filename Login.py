@@ -11,7 +11,7 @@ def user():
                 username = open("username.txt", "r")
                 print("Welcome Back ", username.read())
                 username.close()
-                os.system("start terminal++.exe");
+                os.system("start CLI++Py.exe");
             else:
                 if not tries == 3:
                     print("Incorrect Password!")
