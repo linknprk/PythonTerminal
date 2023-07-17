@@ -112,6 +112,7 @@ int main(){
                 printf("Enter the program you want to run > ");
                 cin >> program;
                 string cmd = "start " + program;
+                system(cmd.c_str);
             }
         }else if(i > 13){
             cout << "Invalid Command! The commands that exist are: " << endl;
