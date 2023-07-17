@@ -4,6 +4,7 @@
 #include <cstdlib>
 using namespace std;
 int main(){
+    system("python Login.py");
     string commands[11]= {"help", "exit", "output", "iscmd", "ping", "get_ip", "ipconfig", "listdir", "write_file", "listfile", "python"};
     string command;
     printf("Type help to get a list of commands \n");
@@ -94,9 +95,12 @@ int main(){
                 cin >> python_file;
                 if(python_file != ""){
                     string cmd = "python " + python_file;
-                    system(cmd);
+                    system(cmd.c_str);
+                    main();
                 }else{
-                    system("python");
+                    strjng cmd = "python";
+                    system(cmd.c_str);
+                    main();
                 }
             }
         }else if(i > 11){
