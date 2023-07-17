@@ -1,17 +1,18 @@
 #include <iostream>
 #include <string>
-#include <stdlib>
+#include <fstream>
+#include <cstdlib>
 using namespace std;
 int main(){
-    string commands[5] = {"help", "exit", "echo", "iscmd", "ping"};
+    string commands[9]= {"help", "exit", "output", "iscmd", "ping", "get_ip", "ipconfig", "listdir", "write_file"};
     string command;
     printf("Type help to get a list of commands \n");
     printf("> ");
     cin >> command;
-    for(int i = 0; i < 5; i++){
+    for(int i = 0; i < 9; i++){
         if(command == commands[i]){
             if(command == "help"){
-                for(int i = 0; i < 5; i++){
+                for(int i = 0; i < 9; i++){
                     cout << commands[i] << endl;
                 }
                 main();
@@ -26,7 +27,7 @@ int main(){
                     main();
                 }
             }
-            if(command == "echo"){
+            if(command == "output"){
                 string userInput;
                 printf("Enter > ");
                 cin >> userInput;
@@ -37,14 +38,13 @@ int main(){
                 string cmd;
                 printf("Enter a command > ");
                 cin >> cmd;
-                for(int i = 0; i < 5; i++){
+                for(int i = 0; i < 9; i++){
                     if(cmd == commands[i]){
                         cout << "true" << endl;
                         break;
                     }
-                    if(cmd != commands[i]){
+                    if(i == 8){
                         cout << "false" << endl;
-                        break;
                     }
                 }
                 main();
@@ -53,10 +53,43 @@ int main(){
                 string request;
                 printf("Enter the URL/IP Address > ");
                 cin >> request;
-                string cmd = request;
-                system("ping " + cmd);
+                system(("ping " + request).c_str());
                 main();
             }
+            if(command == "get_ip"){
+                string request;
+                printf("Enter a URL(Enter /? for help) > ");
+                cin >> request;
+                system(("tracert " + request.c_str());
+                main();
+            }
+            if(command == "ipconfig"){
+                printf("Enter (/? for help. Optional) >");
+                string userInput;
+                cin >> userInput;
+                if(userInput != ""){
+                    system(("ipconfig /" + userInput).c_str());
+                }else{
+                    system("ipconfig");
+                }
+            }
+            if(command == "listdir"){
+                string cmd = "python listdir.py";
+                system(cmd);
+                main();
+            }
+            if(command == "write_file"){
+                string cmd = "python write_file.py";
+                system(cmd)
+                main();
+            }
+        }else if(i == 8){
+            cout << "Invalid Command! The commands that exist are: " << endl;
+            for(int i = 0; i < 9; i++){
+                cout << commands[i] << endl;
+            }
+            main();
         }
     }
+    return 0;
 }
