@@ -7,7 +7,7 @@ int main(){
     string commands[20]= {"run", "netstat" "title", "rename", "/?", "mkdir", "change_dir", "del", "help", "exit", "output", "iscmd", "ping", "get_ip", "ipconfig", "listdir", "write_file", "listfile", "python", "file_exists"};
     string command;
     printf("Type help to get a list of commands \n");
-    printf("> ");
+    printf("CLI++Py > ");
     cin >> command;
     for(int i = 0; i < 20; i++){
         if(command == commands[i]){
