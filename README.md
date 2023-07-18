@@ -31,4 +31,5 @@ To use CLI++Py you can use these basic commands:
 * change_dir to go to a directory 14 
 * ipconfig for do get IP Configuration 15 
 * run to run a program  16
-* Rename to rename files 17
+* rename to rename files 17
+* title to change the title 18
