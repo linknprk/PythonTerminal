@@ -37,9 +37,12 @@ To use CLI++Py you can use these basic commands:
 * title to change the title 18
 * netstat to display information about active network connections
 
-# To use CLI++Py correctly
+# How to use CLI++Py correctly?
 1. Download [Python](https://python.org)
 
-
-# What Operating Systems does CLI++Py support?
+# What Operating SystemS(OS) does CLI++Py support?
 * Windows
+
+
+# How can i report bugs?
+If you know C++ and Python you can edit the code without perimission otherwise you can report bugs at [Github's Issues page](https://github.com/pytutorials/CLIPlusPlusPy/issues)
