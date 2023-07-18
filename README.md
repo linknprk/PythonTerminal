@@ -12,6 +12,7 @@ CLI++Py can be used for:
 * running programs
 * Rename files
 * IP Configuration
+* Display information about active network connections
 
 # How can i use it?
 To use CLI++Py you can use these basic commands:
@@ -33,3 +34,4 @@ To use CLI++Py you can use these basic commands:
 * run to run a program  16
 * rename to rename files 17
 * title to change the title 18
+* netstat to display information about active network connections
