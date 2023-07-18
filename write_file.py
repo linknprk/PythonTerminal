@@ -1,5 +1,5 @@
 """
-The proram asks the user to enter afile
+The proram asks the user to enter a file
 The program then aks the user to enter the file content
 Finally the program checks if the file already exists if it does the program says The file exists
 Otherwise it writes the file with file content
