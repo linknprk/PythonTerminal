@@ -39,3 +39,4 @@ To use CLI++Py you can use these basic commands:
 # To use CLI++Py correctly
 click enter whenever you enter a command.
 Also, you can only use one command at a time.
+To make sure everything works as intended download [Python](https://python.org)
