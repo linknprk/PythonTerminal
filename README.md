@@ -1,5 +1,6 @@
 # What is CLI++Py?
 CLI++Py is an open-source terminal written in C++ and Python
+
 CLI++Py can be used for:
 * Making folders
 * Making files
@@ -37,6 +38,8 @@ To use CLI++Py you can use these basic commands:
 * netstat to display information about active network connections
 
 # To use CLI++Py correctly
-click enter whenever you enter a command.
-Also, you can only use one command at a time.
-To make sure everything works as intended download [Python](https://python.org)
+1. Download [Python](https://python.org)
+
+
+# What Operating Systems does CLI++Py support?
+* Windows
