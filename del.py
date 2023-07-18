@@ -10,7 +10,7 @@ import os
 filedir = input("Enter a file or directory > ")
 if os.path.exists(filedir):
   if os.path.isdir(filedir):
-    os.removedir(filedir)
+    os.removedirs(filedir)
   else:
     os.remove(filedir)
 else:
