@@ -4,12 +4,12 @@
 #include <cstdlib>
 using namespace std;
 int main(){
-    string commands[18]= {"run", "rename", "/?", "mkdir", "change_dir", "del", "help", "exit", "output", "iscmd", "ping", "get_ip", "ipconfig", "listdir", "write_file", "listfile", "python", "file_exists"};
+    string commands[19]= {"run", "title", "rename", "/?", "mkdir", "change_dir", "del", "help", "exit", "output", "iscmd", "ping", "get_ip", "ipconfig", "listdir", "write_file", "listfile", "python", "file_exists"};
     string command;
     printf("Type help to get a list of commands \n");
     printf("> ");
     cin >> command;
-    for(int i = 0; i < 18; i++){
+    for(int i = 0; i < 20; i++){
         if(command == commands[i]){
             if(command == "help" || command == "/?"{
                 for(int i = 0; i < 18; i++){
@@ -38,12 +38,12 @@ int main(){
                 string cmd;
                 printf("Enter a command > ");
                 cin >> cmd;
-                for(int i = 0; i < 18; i++){
+                for(int i = 0; i < 20; i++){
                     if(cmd == commands[i]){
                         cout << "true" << endl;
                         break;
                     }
-                    if(i == 8){
+                    if(i == 20){
                         cout << "false" << endl;
                         break;
                     }
@@ -95,17 +95,17 @@ int main(){
                 cin >> python_file;
                 if(python_file != ""){
                     string cmd = "python " + python_file;
-                    system(cmd.c_str);
+                    system(cmd.c_str());
                     main();
                 }else{
                     string cmd = "python";
-                    system(cmd.c_str);
+                    system(cmd.c_str());
                     main();
                 }
             }
             if(command == "file_exists"){
                 string cmd = "python filexists.py";
-                system(cmd.c_str);
+                system(cmd.c_str());
                 main();
             }
             if(command == "run"){
@@ -113,7 +113,7 @@ int main(){
                 printf("Enter the program you want to run > ");
                 cin >> program;
                 string cmd = "start " + program;
-                system(cmd.c_str);
+                system(cmd.c_str());
                 main();
             }
             if(command == "mkdir"){
@@ -123,22 +123,28 @@ int main(){
             }
             if(command == "del"){
                 string cmd = "del.py";
-                system(cmd.c_str);
+                system(cmd.c_str());
                 main();
             }
             if(command == "change_dir"){
                 string cmd = "python changedir.py";
-                system(cmd.c_str);
+                system(cmd.c_str());
                 main();
             }
             if(command == "rename"){
                 string cmd = "python rename.py";
-                system(cmd.c_str);
+                system(cmd.c_str());
                 main();
             }
-        }else if(i > 18){
+            if(command == "title"){
+                string title;
+                printf("Enter title: ");
+                cin >> title;
+                string cmd = "title " + title;
+                system(cmd.c_str());
+        }else if(i > 20){
             cout << "Invalid Command! The commands that exist are: " << endl;
-            for(int i = 0; i < 18; i++){
+            for(int i = 0; i < 20; i++){
                 cout << commands[i] << endl;
             }
             main();
